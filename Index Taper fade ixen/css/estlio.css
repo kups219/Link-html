@@ -1,0 +1,204 @@
+:root{
+    --padding-container:100px 0;
+    --color-titulo:var(--color_price)
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: var(--padding-container);
+}
+.hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    max-height: 800px;
+    position: relative;
+    display: grid;
+    grid-template-rows: 100px 1fr;
+    color: deeppink;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#0000008c 0%, #00000008 100%), url('../img/fondo\ geringa.jpg');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 95%, 0 80%);
+    z-index: -1;
+}
+
+/* Navigation */
+.nav {
+    --padding-container: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav_title {
+    font-weight: 300;
+}
+
+.nav_link {
+    margin-left: auto;
+    padding: 0;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    gap: 2em;
+}
+
+.nav_items {
+    list-style: none;
+}
+
+.nav_link {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.nav_menu {
+    margin-left: auto;
+    cursor: pointer;
+    display: none;
+}
+
+.nav_img {
+    display: block;
+    width: 30px;
+}
+
+/* Hero Container */
+.hero_container {
+    max-width: 800px;
+    --padding-container: 0;
+    display: grid;
+    grid-auto-rows: max-content;
+    align-items: center;
+    gap: 1em;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.hero_title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero_paragraph {
+    margin-bottom: 20px;
+}
+
+/* About Section */
+.about {
+    text-align: center;
+}
+
+.sublite {
+    color: var(--color-title--);
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.about_paragraph {
+    line-height: 1.7;
+}
+
+.about_main {
+    padding-top: 80px;
+    display: grid;
+    width: 90%;
+    margin: 0 auto;
+    gap: 1em;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    .about_icon{
+        display: grid;
+        gap: 1em;
+        justify-items: center;
+        width: 260px;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+}
+
+.about_icon {
+    display: 100px;
+}
+.cta{
+    display: inline-block;
+    background-color: brown;
+    justify-self: center;
+    color: rgb(0, 224, 67);
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.about_paragraph{
+    margin: 0;
+    text-align: center;
+}
+.knoledge {
+    background-color: cadetblue;
+    background-image: radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5f2f7 0.5px);
+    background-size: 1px 1px;
+    background-position: 0 0, 10px 10px;
+    overflow: hidden;
+}
+
+.knoledge_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+    align-items: center;
+}
+
+.knoledge_picture {
+    max-width: 100%; /* Permitir un ajuste responsivo */
+    height: auto; /* Mantener la proporción de aspecto */
+}
+
+.knoledge_paragraph {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.knoledge_img {
+    width: 100%;
+    height: auto; /* Mantener la proporción de aspecto */
+    display: block;
+}
+
+.price{
+    text-align: center;
+}
+.price_table{
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.price_elementos{
+    background-color: chartreuse;
+    text-align: center;
+    border-radius: 10px;
+    width: 330px;
+    padding: 40px;
+    --color_plan:#f0a309;
+    --color_price:#0684eb;
+    --bg-cta:#dd2678;
+    --color_cta:#22cc22;
+}
